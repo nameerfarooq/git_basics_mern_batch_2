@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <h2>📘 Flexbox Manual</h2>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#terminology">Terminology</a></li>
+            <li><a href="#container">Flex Container</a></li>
+            <li><a href="#items">Flex Items</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#comparison">Flexbox vs Grid</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- 1. Introduction -->
+        <section id="intro">
+            <h1>1. Introduction</h1>
+            <p>
+                Flexbox (Flexible Box Layout) is a one-dimensional layout system in CSS
+                that allows you to design layouts easily by aligning and distributing
+                space among items in a container.
+            </p>
+        </section>
+
+        <!-- 2. Terminology -->
+        <section id="terminology">
+            <h1>2. Terminology</h1>
+            <p><strong>Flex Container:</strong> The parent element with <code>display: flex</code>.</p>
+            <p><strong>Flex Items:</strong> The direct children of the flex container.</p>
+        </section>
+
+        <!-- 3. Flex Container Properties -->
+        <section id="container">
+            <h1>3. Flex Container Properties</h1>
+
+            <!-- flex-direction -->
+            <section id="flex-direction">
+                <h1>Flex Direction Examples</h1>
+                <p>The <code>flex-direction</code> property defines the direction of flex items inside a container.</p>
+                <pre><code>flex-direction: row | row-reverse | column | column-reverse;</code></pre>
+
+                <!-- Row -->
+                <h2>Row (default)</h2>
+                <div class="demo flex-row">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                </div>
+
+                <!-- Row Reverse -->
+                <h2>Row-Reverse</h2>
+                <div class="demo flex-row-reverse">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                </div>
+
+                <!-- Column -->
+                <h2>Column</h2>
+                <div class="demo flex-column">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                </div>
+
+                <!-- Column Reverse -->
+                <h2>Column-Reverse</h2>
+                <div class="demo flex-column-reverse">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                </div>
+            </section>
+
+            <!-- justify-content -->
+            <section id="justify-content">
+                <h1>Justify Content Examples</h1>
+                <p>
+                    The <code>justify-content</code> property aligns items
+                    horizontally inside a flex container (main axis).
+                </p>
+                <pre><code>justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;</code></pre>
+
+                <h2>flex-start (default)</h2>
+                <div class="demo justify-start">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                </div>
+
+                <h2>flex-end</h2>
+                <div class="demo justify-end">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                </div>
+
+                <h2>center</h2>
+                <div class="demo justify-center">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                </div>
+
+                <h2>space-between</h2>
+                <div class="demo justify-between">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                </div>
+
+                <h2>space-around</h2>
+                <div class="demo justify-around">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                </div>
+
+                <h2>space-evenly</h2>
+                <div class="demo justify-evenly">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                </div>
+            </section>
+
+
+            <!-- align-items -->
+            <section id="align-items">
+                <h1>Align Items Examples</h1>
+                <p>
+                    The <code>align-items</code> property aligns items
+                    vertically inside a flex container (cross axis).
+                </p>
+                <pre><code>align-items: stretch | flex-start | flex-end | center | baseline;</code></pre>
+
+                <h2>stretch (default)</h2>
+                <div class="demo align-stretch tall-container">
+                    <div class="box">A</div>
+                    <div class="box">B</div>
+                    <div class="box">C</div>
+                </div>
+
+                <h2>flex-start</h2>
+                <div class="demo align-start tall-container">
+                    <div class="box">A</div>
+                    <div class="box">B</div>
+                    <div class="box">C</div>
+                </div>
+
+                <h2>flex-end</h2>
+                <div class="demo align-end tall-container">
+                    <div class="box">A</div>
+                    <div class="box">B</div>
+                    <div class="box">C</div>
+                </div>
+
+                <h2>center</h2>
+                <div class="demo align-center tall-container">
+                    <div class="box">A</div>
+                    <div class="box">B</div>
+                    <div class="box">C</div>
+                </div>
+
+                <h2>baseline</h2>
+                <div class="demo align-baseline tall-container">
+                    <div class="box">A</div>
+                    <div class="box" style="font-size: 24px;">B</div>
+                    <div class="box">C</div>
+                </div>
+            </section>
+
+
+            <!-- 4. Flex Items -->
+            <section id="items">
+                <h1>4. Flex Item Properties</h1>
+                <ul>
+                    <li><strong>order:</strong> Changes order of items.</li>
+                    <li><strong>flex-grow:</strong> Defines how much an item grows.</li>
+                    <li><strong>flex-shrink:</strong> Defines how much an item shrinks.</li>
+                    <li><strong>flex-basis:</strong> Defines initial size of item.</li>
+                    <li><strong>flex:</strong> Shorthand for grow, shrink, basis.</li>
+                    <li><strong>align-self:</strong> Overrides alignment for one item.</li>
+                </ul>
+                <div class="demo grow-demo">
+                    <div class="box grow1">1</div>
+                    <div class="box grow2">2</div>
+                    <div class="box grow1">3</div>
+                </div>
+            </section>
+
+            <!-- 5. Examples -->
+            <section id="examples">
+                <h1>5. Example Layouts</h1>
+                <h2>Navbar with Flexbox</h2>
+                <div class="navbar">
+                    <div class="logo">Logo</div>
+                    <div class="menu">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- 6. Comparison -->
+            <section id="comparison">
+                <h1>6. Flexbox vs Grid</h1>
+                <table>
+                    <tr>
+                        <th>Flexbox</th>
+                        <th>Grid</th>
+                    </tr>
+                    <tr>
+                        <td>One-dimensional (row or column)</td>
+                        <td>Two-dimensional (rows and columns)</td>
+                    </tr>
+                    <tr>
+                        <td>Best for small UI components</td>
+                        <td>Best for full page layouts</td>
+                    </tr>
+                    <tr>
+                        <td>Content-based sizing</td>
+                        <td>Strict row/column control</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <p>Created as Flexbox Manual for learning purposes.</p>
+            </footer>
+    </main>
+</body>
+
+</html>
