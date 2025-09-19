@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Flexbox</title>
+<style>
+body {
+font-family:Arial, Helvetica, sans-serif;
+line-height: 1.6;
+color: #333;
+max-width: 900px;
+margin: 0 auto;
+padding: 20px;
+background-color: #dde2e9;
+}
+h1 {
+color: #2600ff;
+text-align: center;
+border-bottom: 3px solid #ff0000;
+padding-bottom: 10px;
+}
+h2 {
+color: #257bb4;
+margin-top: 30px;
+}
+ code {
+padding: 2px 6px;
+border-radius: 3px;
+font-family: Consolas, Monaco, 'Andale Mono', monospace;
+} 
+.example {
+background-color: #ecf0f1;
+padding: 15px;
+margin: 20px 0;
+border-radius: 5px;
+cursor: pointer;
+}
+.flex-container{
+display: flex;
+background-color: #ddd;
+padding: 10px;
+margin: 20px 0;
+border-radius: 5px;
+}
+.flex-item {
+background-color: #3498db;
+color: white;
+padding: 15px;
+margin: 5px;
+border-radius: 5px;
+text-align: center;
+ flex: 1; 
+}
+.flex-item:hover{
+    color: rgb(0, 0, 0);
+}
+ul {
+padding-left: 20px;
+}
+
+</style>
+</head>
+<body>
+<h1>CSS Flexbox</h1>
+<p>
+CSS Flexbox(Flexible Box Layout) is a modern layout model designed to provide a more efficient way to lay out, align and distribute space among items in a container even when their size is unknown or dynamic. Flexbox is especially useful for creating responsive designs that adapt to different screen sizes.
+</p>
+<h2>Why Use Flexbox?</h2>
+<ul>
+<li><strong>Predictable Behavior:</strong> Flexbox eliminates many of the quirks and hacks previously needed for layout.</li>
+<li><strong>Responsive by Design:</strong> Flex items can grow, shrink and reorder to best fill available space.</li>
+<li><strong>One-Dimensional Layout:</strong> Flexbox works along a single axis either row or column making it ideal for components like navigation bars, card layouts and form controls.</li>
+</ul>
+
+<h2>Core Concepts:</h2>
+<p>Flexbox involves two types of elements:</p>
+<ul>
+<li><strong>Flex Container:</strong> The parent element that holds flex items.</li>
+<li><strong>Flex Items:</strong> The children of the flex container. Their layout is controlled by the container and their own flex properties.</li>
+</ul>
+
+<h2>Flex Container Properties:</h2>
+
+<h3><code>Display:</code></h3>
+<p>Defines a flex container.</p>
+<ul>
+<li><code>Display:flex;</code> block-level flex container</li>
+</ul>
+
+<h3><code>Flex-direction:</code></h3>
+<p>Defines the main axis and direction of flex items.</p>
+<ul>
+<li><code>Row</code>(default)— left to right</li>
+<li><code>Row-reverse</code>— right to left</li>
+<li><code>Column</code>— top to bottom</li>
+<li><code>Column-reverse</code>— bottom to top</li>
+</ul>
+
+<h3><code>Justify-content:</code></h3>
+<p>Aligns items along the main axis.</p>
+<ul>
+<li><code>Center</code></li>
+<li><code>Space-between</code></li>
+<li><code>Space-around</code></li>
+<li><code>Space-evenly</code></li>
+</ul>
+
+<h3><code>Align-items:</code></h3>
+<p>Aligns items along the cross axis.</p>
+<ul>
+<li><code>Flex-start</code></li>
+<li><code>Flex-end</code></li>
+<li><code>Center</code></li>
+<li><code>Baseline</code></li>
+</ul>
+
+<h3><code>Flex-wrap:</code></h3>
+<p>Controls whether items wrap onto multiple lines.</p>
+<ul>
+<li><code>No-wrap</code></li>
+<li><code>Wrap</code></li>
+<li><code>Wrap-reverse</code></li>
+</ul>
+<br>
+<div class="example">
+<h4>Example: Basic Flex Container</h4>
+<div class="flex-container">
+<div class="flex-item">Item 1</div>
+<div class="flex-item">Item 2</div>
+<div class="flex-item">Item 3</div>
+</div>
+</div>
+<h2>Conclusion:</h2>
+<p>
+CSS Flexbox revolutionizes how we approach layout on the web. With its intuitive properties and powerful alignment capabilities, it simplifies the creation of flexible, responsive interfaces. Mastering Flexbox is essential for any modern front-end developer.
+</p>
+</body>
+</html>
