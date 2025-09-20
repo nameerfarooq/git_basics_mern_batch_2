@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-boxes"></i> CSS Flexbox Guide</h1>
+            <p>Learn how to create flexible layouts with CSS Flexbox</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#terminology">Terminology</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="introduction">
+            <h2>Introduction to Flexbox</h2>
+            <p>CSS Flexible Box Layout, commonly known as Flexbox, is a CSS3 web layout model that allows you to design complex layouts more efficiently and consistently across different screen sizes.</p>
+            
+            <div class="info-box">
+                <h3>Why Use Flexbox?</h3>
+                <ul>
+                    <li>Easily create responsive layouts</li>
+                    <li>Vertically center content with ease</li>
+                    <li>Reorder content without changing HTML structure</li>
+                    <li>Control the distribution of space and alignment</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="terminology">
+            <h2>Flexbox Terminology</h2>
+            <p>Understanding these terms is essential to working with Flexbox:</p>
+            
+            <div class="terminology-grid">
+                <div class="term">
+                    <h3>Flex Container</h3>
+                    <p>The parent element that holds flex items. Created by setting <code>display: flex</code> or <code>display: inline-flex</code>.</p>
+                </div>
+                
+                <div class="term">
+                    <h3>Flex Items</h3>
+                    <p>The children elements within a flex container.</p>
+                </div>
+                
+                <div class="term">
+                    <h3>Main Axis</h3>
+                    <p>The primary axis along which flex items are laid out (horizontal by default).</p>
+                </div>
+                
+                <div class="term">
+                    <h3>Cross Axis</h3>
+                    <p>The axis perpendicular to the main axis (vertical by default).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="properties">
+            <h2>Flex Container Properties</h2>
+            <p>These properties are applied to the flex container to control the layout of its children:</p>
+            
+            <div class="property-card">
+                <h3>flex-direction</h3>
+                <p>Defines the direction of the main axis: <code>row</code>, <code>row-reverse</code>, <code>column</code>, or <code>column-reverse</code>.</p>
+                <div class="interactive-example">
+                    <div class="flex-container example">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+                    <div class="controls">
+                        <button data-property="flex-direction" data-value="row">row</button>
+                        <button data-property="flex-direction" data-value="row-reverse">row-reverse</button>
+                        <button data-property="flex-direction" data-value="column">column</button>
+                        <button data-property="flex-direction" data-value="column-reverse">column-reverse</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="property-card">
+                <h3>justify-content</h3>
+                <p>Defines how space is distributed along the main axis: <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, or <code>space-evenly</code>.</p>
+                <div class="interactive-example">
+                    <div class="flex-container example">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+                    <div class="controls">
+                        <button data-property="justify-content" data-value="flex-start">flex-start</button>
+                        <button data-property="justify-content" data-value="flex-end">flex-end</button>
+                        <button data-property="justify-content" data-value="center">center</button>
+                        <button data-property="justify-content" data-value="space-between">space-between</button>
+                        <button data-property="justify-content" data-value="space-around">space-around</button>
+                        <button data-property="justify-content" data-value="space-evenly">space-evenly</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="examples">
+            <h2>Practical Examples</h2>
+            
+            <div class="example-card">
+                <h3>Navigation Bar</h3>
+                <p>A common use case for Flexbox is creating responsive navigation bars.</p>
+                <div class="flex-container nav-example">
+                    <div class="logo">Logo</div>
+                    <nav class="nav-menu">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Services</a>
+                        <a href="#">Contact</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="example-card">
+                <h3>Card Layout</h3>
+                <p>Flexbox makes it easy to create responsive card layouts.</p>
+                <div class="card-container">
+                    <div class="card">
+                        <h4>Card 1</h4>
+                        <p>This is a sample card with some content.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Card 2</h4>
+                        <p>This is another sample card with content.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Card 3</h4>
+                        <p>Yet another card in this flexible layout.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources">
+            <h2>Additional Resources</h2>
+            <p>Expand your Flexbox knowledge with these resources:</p>
+            
+            <ul class="resources-list">
+                <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS-Tricks: A Complete Guide to Flexbox</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox" target="_blank">MDN Web Docs: Flexbox Basics</a></li>
+                <li><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy - Learn Flexbox with a game</a></li>
+                <li><a href="https://www.w3.org/TR/css-flexbox-1/" target="_blank">W3C Flexbox Specification</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CSS Flexbox Guide.</p>
+        </div>
+    </footer>
+</body>
+</html>
