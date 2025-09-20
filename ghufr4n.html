@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flexbox by Ghufran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    p {
+      line-height: 1.6;
+    }
+    h2 {
+      margin-top: 25px;
+      color: #16a085;
+    }
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+      background: #ecf0f1;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .flex-item {
+      background: #3498db;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 6px;
+      flex: 1;
+    }
+    .example2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      background: #dfe6e9;
+      border-radius: 8px;
+    }
+    .box {
+      width: 60px;
+      height: 60px;
+      background: #e74c3c;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Flexbox</h1>
+  <p>
+    Flexbox (Flexible Box Layout) is a CSS module that provides an efficient way 
+    to align and distribute space among items in a container. It is very helpful 
+    for building responsive designs and avoids the need for complex float or positioning hacks.
+  </p>
+
+  <h2>Basic Example</h2>
+  <div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+  <p>In this example, the parent container uses <code>display: flex;</code>. 
+     All child items are automatically arranged in a row.</p>
+
+  <h2>Centering with Flexbox</h2>
+  <div class="example2">
+    <div class="box"></div>
+  </div>
+  <p>Here, <code>justify-content: center;</code> and 
+     <code>align-items: center;</code> are used to perfectly center the red box 
+     both horizontally and vertically.</p>
+
+  <h2>Advantages of Flexbox</h2>
+  <ul>
+    <li>Easy horizontal and vertical alignment.</li>
+    <li>Great for building responsive layouts.</li>
+    <li>Reduces the need for floats and manual positioning.</li>
+  </ul>
+</body>
+</html>
